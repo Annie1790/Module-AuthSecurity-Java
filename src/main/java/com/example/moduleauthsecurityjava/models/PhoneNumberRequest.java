@@ -10,4 +10,9 @@ public class PhoneNumberRequest {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    public boolean isPhoneNumberCorrect() {
+        final String REGEX = "^(?:0|\\+?44)(?:\\d\\s?){9,10}$";
+        return phone.matches(REGEX);
+    }
 }
